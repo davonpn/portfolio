@@ -54,7 +54,7 @@ function Research() {
                 </div>
                 <div className="rh-item">
                   <div className="rh-dot"></div>
-                  <div className="rh-text">SHAP-based explainability layer providing transparent, human-readable decision rationale</div>
+                  <div className="rh-text">SHAP and LIME-based explainability layer providing transparent, human-readable decision rationale</div>
                 </div>
                 <div className="rh-item">
                   <div className="rh-dot"></div>
