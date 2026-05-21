@@ -818,8 +818,52 @@ footer span{color:var(--green)}
 .cursor-glow{
   width:300px;height:300px;border-radius:50%;
   background:radial-gradient(circle,rgba(0,255,136,0.04),transparent 70%);
-  position:fixed;pointer-events:none;
-  transform:translate(-50%,-50%);
-  transition:all 0.15s ease;
+  position:fixed;top:0;left:0;pointer-events:none;
+  will-change:transform;
   z-index:999;
 }
+
+/* ── Project inquiry modal ── */
+.modal-backdrop{
+  position:fixed;inset:0;
+  background:rgba(5,8,15,0.85);
+  backdrop-filter:blur(8px);
+  z-index:1000;
+  display:flex;align-items:center;justify-content:center;
+  padding:1rem;
+}
+.modal-box{
+  background:var(--card);
+  border:1px solid rgba(0,255,136,0.25);
+  border-radius:4px;
+  padding:2.5rem;
+  max-width:440px;width:100%;
+  position:relative;
+  box-shadow:0 0 60px rgba(0,255,136,0.08);
+}
+.modal-box::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--green),var(--cyan));
+}
+.modal-tag{
+  font-family:'Orbitron',sans-serif;
+  font-size:0.65rem;font-weight:600;letter-spacing:0.15em;
+  color:var(--green);text-transform:uppercase;
+  margin-bottom:1rem;
+  display:flex;align-items:center;gap:0.5rem;
+}
+.modal-tag::before{content:'';width:16px;height:1px;background:var(--green)}
+.modal-title{
+  font-family:'Orbitron',sans-serif;
+  font-size:1.1rem;font-weight:700;
+  color:var(--text);margin-bottom:0.75rem;line-height:1.3;
+}
+.modal-body{font-size:0.9rem;color:var(--text2);line-height:1.8;margin-bottom:2rem}
+.modal-actions{display:flex;gap:0.75rem;flex-wrap:wrap}
+.modal-close{
+  position:absolute;top:1rem;right:1rem;
+  background:transparent;border:none;cursor:pointer;
+  color:var(--text3);font-size:1.2rem;line-height:1;
+  padding:0.25rem;transition:color 0.2s;
+}
+.modal-close:hover{color:var(--text)}

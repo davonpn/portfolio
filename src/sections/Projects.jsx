@@ -1,9 +1,40 @@
+import { useState } from 'react'
+
 const Arrow = () => (
-  <svg className="arrow-icon">
+  <svg className="arrow-icon" viewBox="0 0 24 24">
     <polyline points="5 12 12 12"/>
     <polyline points="9 8 13 12 9 16"/>
   </svg>
 )
+
+function ProjectModal({ onClose }) {
+  const handleContact = () => {
+    onClose()
+    setTimeout(() => {
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  }
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal-box" onClick={e => e.stopPropagation()}>
+        <button className="modal-close" onClick={onClose}>✕</button>
+        <div className="modal-tag">Project Access</div>
+        <div className="modal-title">Want to see the full project?</div>
+        <p className="modal-body">
+          For a full demo, source code walkthrough, or any further inquiry about
+          this project — feel free to reach out directly. I'd love to chat!
+        </p>
+        <div className="modal-actions">
+          <button className="btn-primary" onClick={handleContact}>
+            Send a Message <Arrow />
+          </button>
+          <button className="btn-secondary" onClick={onClose}>Maybe Later</button>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 /*
  * HOW TO USE PROJECT IMAGES
@@ -19,8 +50,16 @@ const Arrow = () => (
  */
 
 function Projects() {
+  const [showModal, setShowModal] = useState(false)
+
+  const handleViewProject = (e) => {
+    e.preventDefault()
+    setShowModal(true)
+  }
+
   return (
     <section id="projects">
+      {showModal && <ProjectModal onClose={() => setShowModal(false)} />}
       <div className="container">
         <div className="projects-header reveal">
           <div>
@@ -55,7 +94,7 @@ function Projects() {
               <span className="project-tag">Jikan API</span>
             </div>
             <div className="project-footer">
-              <a href="#" className="project-link">View Project <Arrow /></a>
+              <a href="#" className="project-link" onClick={handleViewProject}>View Project <Arrow /></a>
             </div>
           </div>
 
@@ -80,7 +119,7 @@ function Projects() {
               <span className="project-tag">Explainable AI</span>
             </div>
             <div className="project-footer">
-              <a href="#" className="project-link">View Project <Arrow /></a>
+              <a href="#" className="project-link" onClick={handleViewProject}>View Project <Arrow /></a>
             </div>
           </div>
 
@@ -104,7 +143,7 @@ function Projects() {
               <span className="project-tag">Python</span>
             </div>
             <div className="project-footer">
-              <a href="#" className="project-link">View Project <Arrow /></a>
+              <a href="#" className="project-link" onClick={handleViewProject}>View Project <Arrow /></a>
             </div>
           </div>
 
@@ -129,7 +168,7 @@ function Projects() {
               <span className="project-tag">Laravel</span>
             </div>
             <div className="project-footer">
-              <a href="#" className="project-link">View Project <Arrow /></a>
+              <a href="#" className="project-link" onClick={handleViewProject}>View Project <Arrow /></a>
             </div>
           </div>
 
@@ -153,7 +192,7 @@ function Projects() {
               <span className="project-tag">SDG</span>
             </div>
             <div className="project-footer">
-              <a href="#" className="project-link">View Project <Arrow /></a>
+              <a href="#" className="project-link" onClick={handleViewProject}>View Project <Arrow /></a>
             </div>
           </div>
 
@@ -179,7 +218,7 @@ function Projects() {
               <span className="project-tag">Molecular Descriptors</span>
             </div>
             <div className="project-footer">
-              <a href="#" className="project-link">View Project <Arrow /></a>
+              <a href="#" className="project-link" onClick={handleViewProject}>View Project <Arrow /></a>
             </div>
           </div>
 

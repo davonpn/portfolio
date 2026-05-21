@@ -12,12 +12,18 @@ import Contact from './sections/Contact.jsx'
 function App() {
   useEffect(() => {
     const glow = document.getElementById('cursorGlow')
+    let rafId = null
     const handleMouseMove = (e) => {
-      glow.style.left = e.clientX + 'px'
-      glow.style.top = e.clientY + 'px'
+      if (rafId) cancelAnimationFrame(rafId)
+      rafId = requestAnimationFrame(() => {
+        glow.style.transform = `translate(${e.clientX - 150}px, ${e.clientY - 150}px)`
+      })
     }
     document.addEventListener('mousemove', handleMouseMove)
-    return () => document.removeEventListener('mousemove', handleMouseMove)
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove)
+      if (rafId) cancelAnimationFrame(rafId)
+    }
   }, [])
 
   useEffect(() => {
