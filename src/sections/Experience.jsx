@@ -12,7 +12,7 @@ function Experience() {
           <div className="exp-card">
             <div className="exp-org">HIMTI BINUS</div>
             <div className="exp-role">Publication &amp; Marketing Division</div>
-            <div className="exp-date">Jan 2024 — Dec 2024 · Student Organization</div>
+            <div className="exp-date">2023 - 2024 · Student Organization</div>
             <ul className="exp-duties">
               <li>Managed and curated educational content across social media platforms, growing digital engagement for the Computer Science faculty organization</li>
               <li>Developed marketing strategies and visual content for department events and academic initiatives</li>
