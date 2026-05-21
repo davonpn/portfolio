@@ -37,7 +37,7 @@ function Projects() {
           <div className="project-card">
             {/* Replace src with your own image — see file header for instructions */}
             <img
-              src="src/assets/aniswipe.png"
+              src="/assets/aniswipe.png"
               alt="Project Preview"
               className="project-img"
             />
@@ -62,7 +62,7 @@ function Projects() {
           <div className="project-card">
             {/* Replace src with your own image — see file header for instructions */}
             <img
-              src="src/assets/semantic-anime-recommendation.png"
+              src="/assets/semantic-anime-recommendation.png"
               alt="Project Preview"
               className="project-img"
             />
@@ -87,7 +87,7 @@ function Projects() {
           <div className="project-card">
             {/* Replace src with your own image — see file header for instructions */}
             <img
-              src="src/assets/automated-car-damage-segmentation.png"
+              src="/assets/automated-car-damage-segmentation.png"
               alt="Project Preview"
               className="project-img"
             />
@@ -111,7 +111,7 @@ function Projects() {
           <div className="project-card">
             {/* Replace src with your own image — see file header for instructions */}
             <img
-              src="src/assets/mathe.png"
+              src="/assets/mathe.png"
               alt="Project Preview"
               className="project-img"
             />
@@ -136,7 +136,7 @@ function Projects() {
           <div className="project-card">
             {/* Replace src with your own image — see file header for instructions */}
             <img
-              src="src/assets/daily-habits-journey.png"
+              src="/assets/daily-habits-journey.png"
               alt="Project Preview"
               className="project-img"
             />
@@ -160,7 +160,7 @@ function Projects() {
           <div className="project-card">
             {/* Replace src with your own image — see file header for instructions */}
             <img
-              src="src/assets/drug-approval-prediction.png"
+              src="/assets/drug-approval-prediction.png"
               alt="Project Preview"
               className="project-img"
             />
