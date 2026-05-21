@@ -12,7 +12,7 @@ function Experience() {
           <div className="exp-card">
             <div className="exp-org">HIMTI BINUS</div>
             <div className="exp-role">Publication &amp; Marketing Division</div>
-            <div className="exp-date">2022 — 2023 · Student Organization</div>
+            <div className="exp-date">Jan 2024 — Dec 2024 · Student Organization</div>
             <ul className="exp-duties">
               <li>Managed and curated educational content across social media platforms, growing digital engagement for the Computer Science faculty organization</li>
               <li>Developed marketing strategies and visual content for department events and academic initiatives</li>
@@ -25,7 +25,7 @@ function Experience() {
             <div className="exp-role">Technical Team Member</div>
             <div className="exp-date">2024 · Event Organizing Committee</div>
             <ul className="exp-duties">
-              <li>Responsible for planning and executing all technical aspects of the university event, ensuring seamless operation of systems and infrastructure</li>
+              <li>Responsible for executing technical aspects of the organization event, ensuring seamless operation of systems and infrastructure</li>
               <li>Coordinated technical logistics and troubleshooting in real-time during live event sessions</li>
               <li>Worked closely with the organizing committee to deliver a smooth and professionally run event experience</li>
             </ul>
