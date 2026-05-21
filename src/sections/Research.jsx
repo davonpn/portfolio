@@ -14,9 +14,13 @@ function Research() {
           <div className="research-inner">
             <div>
               <div className="research-meta">
-                <span className="research-badge rb-conf">ICORIS 2025</span>
-                <span className="research-badge rb-year">Published 2025</span>
-                <span className="research-badge rb-pub">Conference Paper</span>
+                <span className="research-badge rb-conf">TF-IDF</span>
+                <span className="research-badge rb-conf">BERT</span>
+                <span className="research-badge rb-conf">Word2Vec</span>
+                <span className="research-badge rb-year">XGBoost</span>
+                <span className="research-badge rb-year">LightGBM</span>
+                <span className="research-badge rb-pub">SHAP</span>
+                <span className="research-badge rb-pub">LIME</span>
               </div>
               <h3 className="research-title">
                 Fake News Detection Utilizing Ensemble Learning and Explainable AI
